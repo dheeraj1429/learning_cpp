@@ -93,6 +93,30 @@ void pA() {
     cout << p << endl;
 }
 
+void bubbleSort(int nums[], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (nums[i] > nums[j]) {
+                swap(nums[i], nums[j]);
+            }
+        };
+    }
+}
+
+void print(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
 int main() {
+    int n = 5;
+    int nums[] = {5, 4, 3, 7, 9};
+
+    bubbleSort(nums, n);
+
+    print(nums, n);
+
     return 0;
 }
